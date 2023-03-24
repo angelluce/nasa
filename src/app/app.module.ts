@@ -13,24 +13,28 @@ import {DialogModule} from "primeng/dialog";
 import { InfoComponent } from './components/info/info.component';
 import {TooltipModule} from "primeng/tooltip";
 import {ImageModule} from "primeng/image";
+import { ApodComponent } from './components/apod/apod.component';
+import {CarouselModule} from "primeng/carousel";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    InfoComponent
+    InfoComponent,
+    ApodComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    ButtonModule,
-    ToastModule,
-    DialogModule,
-    TooltipModule,
-    ImageModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        ButtonModule,
+        ToastModule,
+        DialogModule,
+        TooltipModule,
+        ImageModule,
+        CarouselModule
+    ],
   providers: [MessageService],
   bootstrap: [AppComponent]
 })

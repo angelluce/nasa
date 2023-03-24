@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {NASA_URL} from "../shared/paths";
+import {NASA_APOD_URL} from "../shared/paths";
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,6 @@ export class NasaService {
   }
 
   getNasaData(): Promise<any> {
-    return this._http.get<any>(NASA_URL).toPromise();
+    return this._http.get<any>(NASA_APOD_URL).toPromise();
   }
 }

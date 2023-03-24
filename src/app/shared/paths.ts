@@ -1,4 +1,5 @@
-// NASA APOD
+import {NASA_KEY} from "./nasa_key";
+
 export const NASA_APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${NASA_KEY}`;
 
 
