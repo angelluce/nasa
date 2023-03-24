@@ -44,3 +44,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+# data keys
+/src/app/shared/nasa_key.ts
