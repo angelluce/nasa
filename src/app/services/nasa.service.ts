@@ -11,7 +11,7 @@ export class NasaService {
   constructor(private _http: HttpClient) {
   }
 
-  getNasaData(): Promise<any> {
+  getNasaApod(): Promise<any> {
     return this._http.get<any>(NASA_APOD_URL).toPromise();
   }
 }

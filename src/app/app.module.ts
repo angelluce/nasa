@@ -10,11 +10,10 @@ import {HomeComponent} from './components/home/home.component';
 import {ButtonModule} from "primeng/button";
 import {ToastModule} from "primeng/toast";
 import {DialogModule} from "primeng/dialog";
-import { InfoComponent } from './components/info/info.component';
+import {InfoComponent} from './components/info/info.component';
 import {TooltipModule} from "primeng/tooltip";
 import {ImageModule} from "primeng/image";
-import { ApodComponent } from './components/apod/apod.component';
-import {CarouselModule} from "primeng/carousel";
+import {ApodComponent} from './components/nasa/apod/apod.component';
 
 @NgModule({
   declarations: [
@@ -23,18 +22,17 @@ import {CarouselModule} from "primeng/carousel";
     InfoComponent,
     ApodComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        ButtonModule,
-        ToastModule,
-        DialogModule,
-        TooltipModule,
-        ImageModule,
-        CarouselModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ButtonModule,
+    ToastModule,
+    DialogModule,
+    TooltipModule,
+    ImageModule
+  ],
   providers: [MessageService],
   bootstrap: [AppComponent]
 })
