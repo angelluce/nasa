@@ -1,7 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {NasaService} from "../../services/nasa.service";
-import {NasaResponse} from "../../models/NasaResponse";
-import {MessageService} from "primeng/api";
 
 @Component({
   selector: 'app-home',

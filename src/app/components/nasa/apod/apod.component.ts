@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {NasaResponse} from "../../models/NasaResponse";
-import {NasaService} from "../../services/nasa.service";
+import {NasaResponse} from "../../../models/NasaResponse";
+import {NasaService} from "../../../services/nasa.service";
 import {MessageService} from "primeng/api";
+import {EnumsNasa} from "../../../shared/enums";
 
 @Component({
   selector: 'app-apod',
@@ -10,6 +11,7 @@ import {MessageService} from "primeng/api";
 })
 export class ApodComponent implements OnInit {
   nasaResponse: NasaResponse;
+  title: string;
   display = false;
 
   constructor(private _nasaService: NasaService,
@@ -17,11 +19,12 @@ export class ApodComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.title = EnumsNasa.nasaApod;
     this.getNasaData();
   }
 
   getNasaData(): void {
-    this._nasaService.getNasaData()
+    this._nasaService.getNasaApod()
       .then(data => {
         this.nasaResponse = data;
         this.display = true;
