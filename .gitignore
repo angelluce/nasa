@@ -47,4 +47,5 @@ Thumbs.db
 
 
 # data keys
+NASA KEY.txt
 /src/app/shared/nasa_key.ts
