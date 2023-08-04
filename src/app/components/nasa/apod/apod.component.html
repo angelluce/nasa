@@ -1,25 +1,19 @@
 <p-toast></p-toast>
 
 <div *ngIf="nasaResponse" class="container">
-  <div class="text-center">
-    <h1 class="display-5">{{nasaResponse?.title}}</h1>
+  <div class="content text-center">
+    <h1 class="display-4">{{nasaResponse?.title}}</h1>
     <p>{{title}}</p>
-  </div>
-  <div class="content">
     <div class="d-flex justify-content-center">
       <p-image *ngIf="nasaResponse?.media_type === 'image'"
-               src="{{nasaResponse?.hdurl}}" alt="Image" width="400" [preview]="true"></p-image>
+               src="{{nasaResponse?.hdurl}}" alt="Image" width="100%" [preview]="true"></p-image>
       <video *ngIf="nasaResponse?.media_type === 'video'"
              autoplay="true" name="media">
         <source src="{{nasaResponse?.url}}" type="video/mp4">
       </video>
     </div>
-    <div class="description mt-3">
-      <p>{{nasaResponse?.explanation}}</p>
-    </div>
-    <div class="credits mt-3">
-      <p style="font-style: italic;
+    <p class="description mt-3">{{nasaResponse?.explanation}}</p>
+    <p class="description mt-3" style="font-style: italic;
       color: #bebebe">Copyright: {{nasaResponse?.copyright || 'Not found'}}</p>
-    </div>
   </div>
 </div>
