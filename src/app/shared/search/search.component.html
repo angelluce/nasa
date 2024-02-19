@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between mb-3 rounded p-3">
+<div class="d-flex justify-content-start align-items-center">
+  <button pButton type="button" icon="pi pi-home" class="ms-3 p-button-outlined" [routerLink]="['/']"></button>
+  <h5 class="m-0 ps-3">{{title}}</h5>
+</div>
+
+  <form [formGroup]="searchForm" (submit)="submitForm()">
+    <p-calendar formControlName="date"></p-calendar>
+    <button pButton type="submit" icon="pi pi-search" class="ms-3"></button>
+<!--      {{searchForm.value | json}}-->
+  </form>
+</div>
