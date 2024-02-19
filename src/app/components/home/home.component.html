@@ -1,1 +1,13 @@
-<div class="container"></div>
+<div class="container content-center text-center">
+  <h1 class="display-2">NASA API</h1>
+  <div class="row row-cols-auto justify-content-center">
+    <div class="card m-3 p-3 text-center" style="width: 18rem;" [routerLink]="['/apod']">
+      <h3 class="text-dark">APOD</h3>
+      <p class="text-muted mb-0">Astronomy Picture of the Day</p>
+    </div>
+    <div class="card m-3 p-3 text-center" style="width: 18rem;" [routerLink]="['/epic']">
+      <h3 class="text-dark">EPIC</h3>
+      <p class="text-muted mb-0">Earth Polychromatic Imaging Camera</p>
+    </div>
+  </div>
+</div>

@@ -17,4 +17,8 @@ export class InfoComponent implements OnInit {
     this.dataSocialNetworks = this.socialNetworksService.getSocialNetworks();
   }
 
+  getCurrentYear(): number {
+    return new Date().getFullYear();
+  }
+
 }

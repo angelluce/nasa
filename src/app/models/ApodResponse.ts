@@ -1,4 +1,4 @@
-export class NasaResponse {
+export class ApodResponse {
   title: string;
   explanation: string;
   media_type: string;

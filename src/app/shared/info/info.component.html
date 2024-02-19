@@ -4,13 +4,13 @@
     <a *ngFor="let socialNetwork of dataSocialNetworks"
        href="{{socialNetwork.url}}" target="_blank">
       <i class="pi {{socialNetwork.icon}} me-3 my-1 networks"
-         style="font-size: 1.2rem"
-         pTooltip="{{socialNetwork.name}}"></i>
+         style="font-size: 1.2rem"></i>
     </a>
   </div>
   <div class="d-flex author">
-    <p class="text-end m-0">
+    <a class="text-end m-0 text-white" style="text-decoration: none"
+    href="https://angelluce.github.io/cv/" target="_blank">
       <i class="pi pi-code m-1"></i>
-      Angel Lucero | 2023</p>
+      Angel Lucero | {{getCurrentYear()}}</a>
   </div>
 </div>

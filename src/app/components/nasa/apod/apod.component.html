@@ -1,19 +1,20 @@
 <p-toast></p-toast>
 
+<app-search [title]="title" [searchType]="false" (response)="searchNasaData($event)"></app-search>
+
 <div *ngIf="nasaResponse" class="container">
   <div class="content text-center">
-    <h1 class="display-4">{{nasaResponse?.title}}</h1>
-    <p>{{title}}</p>
     <div class="d-flex justify-content-center">
-      <p-image *ngIf="nasaResponse?.media_type === 'image'"
-               src="{{nasaResponse?.hdurl}}" alt="Image" width="100%" [preview]="true"></p-image>
-      <video *ngIf="nasaResponse?.media_type === 'video'"
-             autoplay="true" name="media">
-        <source src="{{nasaResponse?.url}}" type="video/mp4">
-      </video>
+      <p-image *ngIf="nasaResponse?.media_type === 'image'" width="250"
+      src="{{nasaResponse?.hdurl}}" alt="" [preview]="true"></p-image>
+      <iframe *ngIf="nasaResponse?.media_type === 'video'"
+      [src]="nasaResponse?.url | safe" width="400" height="300"></iframe>
     </div>
-    <p class="description mt-3">{{nasaResponse?.explanation}}</p>
-    <p class="description mt-3" style="font-style: italic;
-      color: #bebebe">Copyright: {{nasaResponse?.copyright || 'Not found'}}</p>
+    <h1 class="display-5">{{ nasaResponse?.title }}</h1>
+    <p class="description mt-3 text-justify">{{ nasaResponse?.explanation }}</p>
+    <p *ngIf="nasaResponse?.copyright" class="description mt-3" style="font-style: italic;
+      color: #bebebe">Copyright: {{ nasaResponse?.copyright || 'Not found' }}</p>
   </div>
 </div>
+
+<app-loading *ngIf="loading"></app-loading>

@@ -3,7 +3,7 @@
 # NASA
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
-Watch the result in [GitHub Pages](https://angelluce.github.io/NASA/)
+Watch the result in [GitHub Pages](https://angelluce.github.io/nasa/)
 
 Visit the [NASA API](https://api.nasa.gov/) to get your own API key and more information about the API.
 

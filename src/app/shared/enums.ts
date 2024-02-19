@@ -1,3 +1,4 @@
 export enum EnumsNasa {
-  nasaApod = 'Astronomy Picture of the Day (APOD)'
+  nasaApod = 'Astronomy Picture of the Day (APOD)',
+  nasaEpic = 'Earth Polychromatic Imaging Camera (EPIC)',
 }

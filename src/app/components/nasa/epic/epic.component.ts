@@ -42,7 +42,6 @@ export class EpicComponent implements OnInit {
             image: NASA_EPIC_IMAGE_URL(date, item.image)
           }
         });
-        console.log(this.nasaResponse)
         this.loading = false;
       },
       error: (err) => {
