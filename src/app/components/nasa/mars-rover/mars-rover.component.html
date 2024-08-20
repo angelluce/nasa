@@ -1,0 +1,19 @@
+<p-toast></p-toast>
+
+<app-search [title]="title" [searchType]="false" (response)="searchNasaData($event)"></app-search>
+
+<div *ngIf="nasaResponse" class="row row-cols-auto justify-content-center">
+  <div *ngFor="let data of nasaResponse" class="shadow m-1" style="width: 200px;">
+    <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center" style="width: 200px;">
+        <p-image [src]="data.img_src" width="200" class="img-square" alt="..." [preview]="true"></p-image>
+      </div>
+    </div>
+    <label class="mt-3">Earth date:</label>
+    <h3>{{ data.earth_date }}</h3>
+    <p class="description mt-3 text-justify">{{ data.rover?.name }}</p>
+
+  </div>
+</div>
+
+<app-loading *ngIf="loading"></app-loading>
