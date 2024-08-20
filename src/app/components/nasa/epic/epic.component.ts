@@ -29,10 +29,10 @@ export class EpicComponent implements OnInit {
     return dateString.replace(/-/g, '/');
   }
 
-  getNasaData(params?: string): void {
-    this.nasaResponse = [];
+  getNasaData(date?: string): void {
     this.loading = true;
-    this._nasaService.getNasaEpic(params ? params : '').subscribe({
+    this.nasaResponse = [];
+    this._nasaService.getNasaEpic(date).subscribe({
       next: (data) => {
         this.nasaResponse = data.map((item: any) => {
           const date = this.getFormattedDate(item.date);
@@ -57,7 +57,9 @@ export class EpicComponent implements OnInit {
   }
 
   searchNasaData(event: string) {
+    event = event.split('=')[1];
     console.log(event);
+    this.getNasaData(event);
   }
 
 }

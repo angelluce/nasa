@@ -12,11 +12,14 @@ export class SearchComponent implements OnInit {
   @Output() response: EventEmitter<string> = new EventEmitter<string>();
   searchForm: FormGroup
 
+  maxDate: Date;
+
   constructor(private _formBuilder: FormBuilder) {
   }
 
   ngOnInit(): void {
     this.initForm();
+    this.maxDate = this.getTodayDate();
   }
 
   initForm() {
@@ -32,19 +35,18 @@ export class SearchComponent implements OnInit {
       if (this.searchForm.get('start_date')?.value === '' && this.searchForm.get('end_date')?.value === '') {
         return;
       } else {
-        this.response.emit(`&start_date=${this.searchForm.get('start_date')?.value.toISOString().split('T')[0]}&end_date=${this.searchForm.get('end_date')?.value.toISOString().split('T')[0]}`);
+        this.response.emit(`&start_date=${this.searchForm.get('start_date')?.value?.toISOString().split('T')[0]}&end_date=${this.searchForm.get('end_date')?.value?.toISOString().split('T')[0]}`);
       }
     } else {
       if (this.searchForm.get('date')?.value === '') {
         return;
       } else {
-        this.response.emit(`&date=${this.searchForm.get('date')?.value.toISOString().split('T')[0]}`);
+        this.response.emit(`&date=${this.searchForm.get('date')?.value?.toISOString().split('T')[0]}`);
       }
     }
   }
 
   getTodayDate() {
-    // return new Date().toISOString().split('T')[0];
     return new Date();
   }
 

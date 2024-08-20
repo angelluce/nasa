@@ -20,6 +20,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {CalendarModule} from "primeng/calendar";
 import { EpicComponent } from './components/nasa/epic/epic.component';
 import {SafePipe} from "./shared/safe.pipe";
+import { MarsRoverComponent } from './components/nasa/mars-rover/mars-rover.component';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import {SafePipe} from "./shared/safe.pipe";
         LoadingComponent,
         SearchComponent,
         EpicComponent,
-        SafePipe
+        SafePipe,
+        MarsRoverComponent
     ],
   imports: [
     BrowserModule,

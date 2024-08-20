@@ -5,8 +5,8 @@
 <div *ngIf="nasaResponse" class="container text-center">
   <h3 *ngIf="nasaResponse[0]" class="card-title mb-3">{{ nasaResponse[0].caption }}</h3>
   <div class="row row-cols-auto justify-content-center">
-    <div *ngFor="let data of nasaResponse" class="shadow m-1" style="width: 250px;">
-      <p-image [src]="data.image" class="rounded" alt="..." width="250"></p-image>
+    <div *ngFor="let data of nasaResponse" class="shadow m-1" style="width: 200px;">
+      <p-image [src]="data.image" width="200" class="img-square" alt="..." [preview]="true"></p-image>
       <div class="my-3">
         <p>{{ data.date }}</p>
         <p>Lat: {{ data.centroid_coordinates.lat }}, Lon: {{ data.centroid_coordinates.lon }}</p>
@@ -14,3 +14,5 @@
     </div>
   </div>
 </div>
+
+<app-loading *ngIf="loading"></app-loading>

@@ -41,7 +41,6 @@ export class ApodComponent implements OnInit {
   }
 
   searchNasaData(event: string) {
-    // console.log(event);
     this.getNasaData(event);
   }
 

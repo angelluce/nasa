@@ -22,7 +22,7 @@ export class SocialNetworksService {
       },
       {
         name: 'Instagram',
-        url: 'https://www.instagram.com/angel.lu24/',
+        url: 'https://www.instagram.com/angellucero.dev/',
         icon: 'pi-instagram',
       },
     ];

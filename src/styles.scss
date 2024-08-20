@@ -8,3 +8,13 @@
 .text-justify {
   text-align: justify !important;
 }
+
+.img-square {
+  width: 100% !important;
+  aspect-ratio: 1/1 !important;
+  object-fit: cover !important;
+}
+
+.p-toast-summary, .p-toast-detail {
+  color: #071426 !important;
+}

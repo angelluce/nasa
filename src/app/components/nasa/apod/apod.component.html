@@ -5,10 +5,12 @@
 <div *ngIf="nasaResponse" class="container">
   <div class="content text-center">
     <div class="d-flex justify-content-center">
-      <p-image *ngIf="nasaResponse?.media_type === 'image'" width="250"
-      src="{{nasaResponse?.hdurl}}" alt="" [preview]="true"></p-image>
-      <iframe *ngIf="nasaResponse?.media_type === 'video'"
-      [src]="nasaResponse?.url | safe" width="400" height="300"></iframe>
+      <div class="d-flex justify-content-center" style="width: 200px;">
+        <p-image *ngIf="nasaResponse?.media_type === 'image'" width="200" class="img-square"
+                 src="{{nasaResponse?.hdurl}}" alt="" [preview]="true"></p-image>
+        <iframe *ngIf="nasaResponse?.media_type === 'video'"
+                [src]="nasaResponse?.url | safe" width="200" height="200" class="img-square"></iframe>
+      </div>
     </div>
     <h1 class="display-5">{{ nasaResponse?.title }}</h1>
     <p class="description mt-3 text-justify">{{ nasaResponse?.explanation }}</p>
