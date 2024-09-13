@@ -33,7 +33,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Deploy to GitHub Pages
 
-Run `ng deploy --base-href=https://angelluce.github.io/nasa/`  to deploy the project to GitHub Pages.
+Run `ng build --prod`, next runnas `ng deploy --base-href=https://angelluce.github.io/nasa/`  to deploy the project to GitHub Pages.
 
 ### Authors
 
