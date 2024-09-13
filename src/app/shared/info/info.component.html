@@ -1,16 +1,11 @@
-<div *ngIf="dataSocialNetworks.length > 0"
-     class="fixed-bottom bg-dark d-flex justify-content-between p-2">
-  <div class="d-flex networks">
-    <a *ngFor="let socialNetwork of dataSocialNetworks"
-       href="{{socialNetwork.url}}" target="_blank">
-      <i class="pi {{socialNetwork.icon}} me-3 my-1 networks"
-         style="font-size: 1.2rem"></i>
-    </a>
-  </div>
-  <div class="d-flex author">
-    <a class="text-end m-0 text-white" style="text-decoration: none"
-    href="https://angelluce.github.io/cv/" target="_blank">
-      <i class="pi pi-code m-1"></i>
-      Angel Lucero | {{getCurrentYear()}}</a>
-  </div>
+<div *ngIf="dataSocialNetworks.length > 0" class="fixed-bottom bg-dark d-flex justify-content-between p-2">
+    <div class="d-flex networks">
+        <a *ngFor="let socialNetwork of dataSocialNetworks" href="{{socialNetwork.url}}" target="_blank" aria-label="Red soial">
+            <i class="pi {{socialNetwork.icon}} me-3 my-1 networks" style="font-size: 1.2rem"></i>
+        </a>
+    </div>
+    <div class="d-flex author">
+        <a class="text-end m-0 text-white" style="text-decoration: none" href="https://angelluce.github.io/cv/" target="_blank">
+            <i class="pi pi-code m-1"></i> Angel Lucero | {{getCurrentYear()}}</a>
+    </div>
 </div>
